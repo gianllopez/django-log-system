@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'login/styles.css' %}">
+        <title>myUserDjango | Iniciar Sesión</title>
+    </head>
+    <body id="body">
+        <form action="" class="main-form">
+            <span id="maintitle-wrapper">
+                <h1>¡Ingresa!</h1>
+            </span>
+            <div class="entries">
+                <div class="data-input">
+                    <input type="text" name="username" autocomplete="off" required>
+                    <label for="username">
+                        <span>Usuario</span>
+                    </label>
+                </div>
+                <div class="data-input">
+                    <input type="password" name="password" autocomplete="off" required>
+                    <label for="password">
+                        <span>Contraseña</span>
+                    </label>
+                </div> 
+                <button>Ingresar</button>
+                <h4 style="text-align: center;">¿No te has registrado?<br><a href="{% url 'logup' %}">Registrate aquí</a></h4>                
+            </div>        
+        </form>
+    </body>
+    <script src="{% static 'jquery-3.5.1.js' %}"></script>
+    <script>
+        const $body = $('body')
+        $body.css({'height' : $body.height()})
+    </script>
+</html>

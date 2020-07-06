@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100vh;
+}
+
+.main-form {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#maintitle-wrapper {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#maintitle-wrapper h1 {
+    height: 50%;
+    width: 100%;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    background-color: #333134;
+    color: white;
+
+}
+
+.entries {
+    height: 65%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.data-input {
+    position: relative;
+    width: 80%;
+    height: 10%;
+    margin-bottom: 25px;
+}
+
+.data-input input {
+    width: 95%;
+    border: none;
+    outline: none;
+    padding: 3px 0 0 8px;
+    font-size: 1.2em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.data-input label {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 2px solid black;
+    transition: all .5s ease ;
+}
+
+.data-input label span  {
+    position: absolute;
+    bottom: 0;
+    transition: all .5s ease;
+}
+
+.data-input input:focus + label,
+.data-input input:valid + label {
+    border: 2px solid black;
+}
+
+.data-input input:focus + label span,
+.data-input input:valid + label span {
+    transform: translateY(-65%);
+    padding: 0 3px;
+    left: 4px;
+    background-color: white;
+    top: 0;
+    height: min-content;
+}
+
+button {
+    margin: 0 0 20px 0;
+    width: 40%;
+    height: 40px;
+    border: 2px solid black;
+    background-color: #333134;
+    color: white;
+    border-radius: 5px;
+}
+
+/* ==>> Medias Queries <<==*/
+
+@media screen and (min-width:360px) { .entries { width: 85% }}
+@media screen and (min-width:400px) { .entries { width: 80% }}
+@media screen and (min-width:440px) { .entries { width: 75% }}
+@media screen and (min-width:481px) { .entries { width: 70% }}
+@media screen and (min-width:552px) { .entries { width: 65% }}
+@media screen and (min-width:606px) { .entries { width: 55% }}
+/* @media screen and (min-width:768px) { .entries { width: 40% } } */
+@media screen and (min-width:832px) { .entries { width: 50% }}
+@media screen and (min-width:928px) { .entries { width: 45% }}
+@media screen and (min-width:1232px) { .entries { width: 40% }}
