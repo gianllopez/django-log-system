@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'logup/styles.css' %}">
+        <title>myUserDjango | Registrate</title>
+    </head>
+    <body>
+        <form action="" class="main-form">
+            <span id="maintitle-wrapper">
+                <h1>¡Registrate!</h1>
+            </span>
+            <div class="entries">
+                <div class="data-input">
+                    <input type="text" name="username" autocomplete="off" required>
+                    <label for="username">
+                        <span>Usuario</span>
+                    </label>
+                </div>
+                
+                <div class="data-input">
+                    <input type="password" name="password" autocomplete="off" required>
+                    <label for="password">
+                        <span>Contraseña</span>
+                    </label>
+                </div> 
+                
+                <div class="data-input">
+                    <input type="text" name="name" autocomplete="off" required>
+                    <label for="name">
+                        <span>Nombre</span>
+                    </label>
+                </div> 
+
+                <div class="data-input">
+                    <input type="text" name="surnames" autocomplete="off" required>
+                    <label for="surnames">
+                        <span>Apellido</span>
+                    </label>
+                </div> 
+
+                <div class="data-input">
+                    <input type="text" name="email" autocomplete="off" required>
+                    <label for="surnames">
+                        <span>Email</span>
+                    </label>
+                </div> 
+                
+                <div class="sec-field">
+                    <div class="data-input">
+                        <input type="text" name="phone" autocomplete="off" required>
+                        <label for="phone">
+                            <span>Teléfono</span>
+                        </label>
+                    </div> 
+                    <div class="data-input">
+                        <input type="number" name="age" autocomplete="off" required>
+                        <label for="age">
+                            <span>Edad</span>
+                        </label>
+                    </div>                     
+                </div>
+                <button>Registrarse</button>
+            </div>        
+        </form>
+    </body>
+    <script src="{% static 'logup/jquery-3.5.1.js' %}"></script>
+    <script>
+        const $body = $('body')
+        $body.css({'height' : $body.height()})
+    </script>
+</html>
