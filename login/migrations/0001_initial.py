@@ -15,14 +15,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='LogUpModel',
+            name='LoginLog',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=25)),
-                ('surname', models.CharField(max_length=25)),
-                ('phone', models.CharField(blank=True, max_length=20, null=True)),
-                ('age', models.IntegerField(blank=True, default=18, null=True)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('username', models.CharField(max_length=25)),
+                ('logindate', models.DateField(auto_now_add=True)),
+                ('logintime', models.TimeField(auto_now_add=True)),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
