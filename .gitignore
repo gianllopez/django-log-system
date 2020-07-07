@@ -1,1 +1,7 @@
-__pycache__/
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+*.py[cod] 
+*$py.class 

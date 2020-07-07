@@ -8,11 +8,15 @@
         <title>myUserDjango | Iniciar Sesión</title>
     </head>
     <body id="body">
-        <form action="" class="main-form">
+        <form class="main-form" method="POST">
+            {% csrf_token %}
             <span id="maintitle-wrapper">
                 <h1>¡Ingresa!</h1>
             </span>
             <div class="entries">
+                {% if login_error %}
+                    <p style="color: red; padding-bottom: 25px; text-align: center;">{{ login_error }}</p>
+                {% endif %}
                 <div class="data-input">
                     <input type="text" name="username" autocomplete="off" required>
                     <label for="username">
