@@ -8,7 +8,11 @@
         <title>myUserDjango | Registrate</title>
     </head>
     <body>
-        <form action="" class="main-form">
+        <form class="main-form" method="POST">
+            {% csrf_token %}
+            {% if message %} 
+                <p>{{message}}</p>
+            {% endif %}
             <span id="maintitle-wrapper">
                 <h1>¡Registrate!</h1>
             </span>
@@ -35,7 +39,7 @@
                 </div> 
 
                 <div class="data-input">
-                    <input type="text" name="surnames" autocomplete="off" required>
+                    <input type="text" name="surname" autocomplete="off" required>
                     <label for="surnames">
                         <span>Apellido</span>
                     </label>
@@ -63,6 +67,7 @@
                     </div>                     
                 </div>
                 <button>Registrarse</button>
+                <h4 style="text-align: center; margin-top: 15px;">¿Ya te has registrado?<br><a href="{% url 'login' %}">Inicia sesión aquí</a></h4>                
             </div>        
         </form>
     </body>
