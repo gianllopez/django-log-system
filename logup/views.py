@@ -19,5 +19,5 @@ def logupview(request):
             phone = data['phone'],
             age = data['age']
         )
-        return redirect('login')
-    return render(request, 'logup.html')
+        return redirect(to='login')
+    return render(request=request, template_name='logup.html')

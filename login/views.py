@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import LoginLog
 
@@ -13,11 +13,7 @@ def loginview(request):
         user = authenticate(username=username, password=password)
         if user:
             userdata = User.objects.get(username=username)
-            model = LoginLog(
-                user=userdata,
-                username=username
-            )            
-            model.save()
+            LoginLog.objects.create(user=userdata, username=username)            
             login(request, user)
             return redirect('main')
         else:
@@ -30,4 +26,4 @@ def loginview(request):
 
 @login_required(login_url='login')
 def mainview(request):
-    return render(request, 'main.html')
+    return render(request=request, template_name='main.html')
