@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from logup import views as logup
 from login import views as login
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('logup/', logup.logupview, name='logup'),
     path('login/', login.loginview, name='login'),
     path('main/', login.mainview, name='main'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
