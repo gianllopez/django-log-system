@@ -1,2 +1,2 @@
 # django-log-system
-Este proyecto fue desarrollado hace mucho tiempo, en el orden estrictamente técnico, mis habilidades han mejorado en base a las expuestas en el código fuente de este repositorio.
+Este proyecto fue desarrollado hace mucho tiempo y, desde entonces, he mejorado significativamente mis habilidades técnicas. Si deseas verificar mi progreso, te invito a revisar algunos de mis repositorios más recientes.
